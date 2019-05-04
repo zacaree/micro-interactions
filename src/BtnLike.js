@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Heart from './images/heart.js';
 
 const BtnLike = props => {
-  const { postId } = props;
+  const { postId, totalLikes } = props.postData;
   const { likedPosts } = props.user;
 
-  const [likeCount, setLikeCount] = useState(255);
+  const [likeCount, setLikeCount] = useState(totalLikes);
   const liked = likedPosts.includes(postId) ? true : false;
 
   const handleClick = () => {

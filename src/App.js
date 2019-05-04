@@ -5,7 +5,7 @@ import BtnLike from './BtnLike';
 const data = {
   user: {
     name: 'Zac Remboldt',
-    likedPosts: [13482, 17423, 21233],
+    likedPosts: [13482, 12348, 21233, 48347],
     social: {
       website: 'https://www.zacremboldt.com/',
       github: '@zacaree',
@@ -18,7 +18,9 @@ const data = {
 function App() {
   return (
     <div className="App">
-      <BtnLike user={data.user} postId={12345} />
+      <BtnLike user={data.user} postData={{ postId: 12348, totalLikes: 256 }} />
+      <BtnLike user={data.user} postData={{ postId: 12349, totalLikes: 511 }} />
+      <BtnLike user={data.user} postData={{ postId: 12345, totalLikes: 1023 }} />
     </div>
   );
 }

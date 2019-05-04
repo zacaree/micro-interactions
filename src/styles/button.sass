@@ -1,0 +1,44 @@
+
+button
+  display: flex
+  justify-content: center
+  padding: 0.5rem 1rem
+  margin: 1rem
+  background-color: $carbon
+  border-radius: 50px
+  color: $coral
+  font-weight: bold
+
+  &:hover,
+  &:focus
+    background: #1d2026
+    outline: none
+  
+  &:active 
+    transform: scale(0.98)
+  
+  span
+    margin: 1px 0 0 6px
+
+  svg
+    position: relative
+    fill: $coral
+    fill-opacity: 0
+    stroke: $coral
+    stroke-width: 2px
+    transform-origin: center
+    transition: 0.2s ease-out
+
+  &.liked
+    svg
+      fill-opacity: 1
+      animation-name: animateHeart
+      animation-duration: .3s
+      animation-timing-function: cubic-bezier(0.2,0.95,0.51,1.95)
+      animation-fill-mode: forwards
+
+@keyframes animateHeart
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
